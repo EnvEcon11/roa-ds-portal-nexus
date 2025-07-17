@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BarChart3, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, BarChart3, TrendingUp, Target } from "lucide-react";
+import heroIllustration from "@/assets/hero-illustration.jpg";
 
 const Hero = () => {
   return (
@@ -8,58 +9,73 @@ const Hero = () => {
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-sm font-medium text-primary">ROA-DS Analytics Platform</span>
+      <div className="relative z-10 container mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-sm font-medium text-primary">TCO Analysis Platform</span>
+            </div>
+            
+            {/* Heading */}
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent leading-tight">
+              ROA-DS System
+            </h1>
+            
+            {/* Subheading */}
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+              Total Cost of Ownership Analysis & Strategic Decision Making
+            </p>
+            <p className="text-lg text-muted-foreground mb-12">
+              Advanced TCO methodologies to optimize costs, analyze scenarios, and drive strategic business decisions with data-driven insights.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-16">
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                Learn More
+              </Button>
+            </div>
           </div>
           
-          {/* Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            ROA-DS System
-          </h1>
-          
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Advanced data science methodologies and analytics platform that transforms your data into actionable insights through proven analytical frameworks.
-          </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="bg-gradient-primary shadow-glow hover:shadow-xl transition-all duration-300">
-              Explore Methodologies
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button variant="outline" size="lg" className="border-primary/20 hover:bg-primary/5">
-              View Documentation
-            </Button>
+          <div className="relative">
+            <img 
+              src={heroIllustration} 
+              alt="TCO Analysis Illustration" 
+              className="w-full h-auto rounded-lg shadow-card"
+            />
+          </div>
+        </div>
+        
+        {/* Features */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+          <div className="text-center p-6 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50 hover:shadow-card transition-all duration-300">
+            <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <BarChart3 className="h-6 w-6 text-primary" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2 text-foreground">Scenario Analysis</h3>
+            <p className="text-muted-foreground text-sm">Multi-scenario TCO modeling for comprehensive cost evaluation</p>
           </div>
           
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
-                <BarChart3 className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground">12+</h3>
-              <p className="text-sm text-muted-foreground">Methodologies</p>
+          <div className="text-center p-6 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50 hover:shadow-card transition-all duration-300">
+            <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <TrendingUp className="h-6 w-6 text-accent" />
             </div>
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
-                <TrendingUp className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground">99.5%</h3>
-              <p className="text-sm text-muted-foreground">Accuracy Rate</p>
+            <h3 className="text-lg font-semibold mb-2 text-foreground">Cost Optimization</h3>
+            <p className="text-muted-foreground text-sm">Advanced algorithms to identify cost reduction opportunities</p>
+          </div>
+          
+          <div className="text-center p-6 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50 hover:shadow-card transition-all duration-300">
+            <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Target className="h-6 w-6 text-primary" />
             </div>
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
-                <Users className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground">500+</h3>
-              <p className="text-sm text-muted-foreground">Active Users</p>
-            </div>
+            <h3 className="text-lg font-semibold mb-2 text-foreground">Strategic Insights</h3>
+            <p className="text-muted-foreground text-sm">Data-driven insights for strategic business decisions</p>
           </div>
         </div>
       </div>
