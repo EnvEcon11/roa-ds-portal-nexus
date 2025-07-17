@@ -41,7 +41,7 @@ const methodologies = [
 ];
 
 const Methodologies = () => {
-  const handleExplore = (methodology: string) => {
+  const handleExplore = (methodology) => {
     console.log(`Exploring ${methodology}`);
     // Navigation logic will be added later
   };

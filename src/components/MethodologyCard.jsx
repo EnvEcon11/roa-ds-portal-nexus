@@ -1,17 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { LucideIcon } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
-interface MethodologyCardProps {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  features: string[];
-  onExplore: () => void;
-}
-
-const MethodologyCard = ({ title, description, icon: Icon, features, onExplore }: MethodologyCardProps) => {
+const MethodologyCard = ({ title, description, icon: Icon, features, onExplore }) => {
   return (
     <Card className="group relative overflow-hidden border-0 shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-1">
       <div className="absolute inset-0 bg-gradient-secondary opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
